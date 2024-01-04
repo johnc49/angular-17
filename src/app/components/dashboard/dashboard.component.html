@@ -1,0 +1,14 @@
+<p>dashboard works!</p>
+
+@defer (on viewport) {
+<div *ngFor="let product of products" class="d-flex">
+  <h1>{{ product.id }}.</h1>
+  <h2>{{ product.name }}</h2>
+</div>
+} @placeholder {
+<h1>you see this first</h1>
+} @loading() {
+<p>when loading...</p>
+} @error {
+<h6>when there is an error</h6>
+}
