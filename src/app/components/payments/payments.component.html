@@ -1,1 +1,33 @@
-<p>payments works!</p>
+<app-navbar></app-navbar>
+<div class="ms-3">
+  <p>payments works!</p>
+
+  @if (isTrue) {
+  <div class="ms-1 position-relative">
+    <div class="yes">
+      <ul>
+        <li><a href="#">open up</a></li>
+        <li><a href="#">see</a></li>
+        <li><a href="#">pay</a></li>
+        <li><a href="#">checkout</a></li>
+      </ul>
+    </div>
+  </div>
+
+  }
+
+  <button class="btn border-0 btn-show" (click)="isTrue = !isTrue">
+    {{ isTrue ? "Hide" : "Show" }}
+  </button>
+</div>
+
+<div class="ms-5 position-relative">
+  <div class="yes" [ngClass]="{ active: isTrue }">
+    <ul>
+      <li><a href="#">open up yes</a></li>
+      <li><a href="#">see</a></li>
+      <li><a href="#">pay</a></li>
+      <li><a href="#">checkout</a></li>
+    </ul>
+  </div>
+</div>

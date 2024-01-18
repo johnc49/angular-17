@@ -1,14 +1,43 @@
+<app-navbar></app-navbar>
 <p>dashboard works!</p>
 
-@defer (on viewport) {
-<div *ngFor="let product of products" class="d-flex">
-  <h1>{{ product.id }}.</h1>
-  <h2>{{ product.name }}</h2>
+@if (!isData) {
+<div>spinner</div>
+}
+<!-- @for (item of products; track item.id; ) {
+  <div class="d-flex">
+    <h1>{{ item.id }}.</h1>
+    <h2>{{ item.name }}</h2>
+  </div>
+  } -->
+@defer (when isData) { @for (item of products; track item.id; ) {
+<div class="d-flex">
+  <h1>{{ item.id }}.</h1>
+  <h2>{{ item.name }}</h2>
 </div>
-} @placeholder {
+} } @placeholder {
 <h1>you see this first</h1>
 } @loading() {
 <p>when loading...</p>
-} @error {
+} @error() {
 <h6>when there is an error</h6>
 }
+<!-- @if (name == false) {
+<div>yes</div>
+}@else {
+<div>No</div>
+} -->
+
+<!-- <ul>
+  @for (item of customerList(); track item.id; let idx=$index,
+  count=$count,first=$first, last=$last, odd=$odd, even=$even) {
+   <h3>Count: {{ count }}</h3> 
+  @if (first == true) {
+  <li style="background-color: gray">#{{ idx }} - {{ item.name }}</li>
+
+  } @else if (last == true) {
+  <li style="background-color: aqua">#{{ idx }} - {{ item.name }}</li>
+  } @else {
+  <li>#{{ idx }} - {{ item.name }}</li>
+  } }
+</ul> -->

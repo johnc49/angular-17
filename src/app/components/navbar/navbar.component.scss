@@ -1,0 +1,18 @@
+a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+a:hover {
+  color: greenyellow;
+}
+li {
+  list-style: none;
+}
+.bar {
+  background-color: rgb(106, 106, 255);
+  // background: #ffcb05;
+}
+.router-link-active {
+  color: rgb(2, 206, 172);
+}
