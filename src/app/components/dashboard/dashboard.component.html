@@ -3,6 +3,8 @@
 
 @if (!isData) {
 <div>spinner</div>
+} @else {
+<div>ready</div>
 }
 <!-- @for (item of products; track item.id; ) {
   <div class="d-flex">
@@ -17,9 +19,9 @@
 </div>
 } } @placeholder {
 <h1>you see this first</h1>
-} @loading() {
+} @loading {
 <p>when loading...</p>
-} @error() {
+} @error {
 <h6>when there is an error</h6>
 }
 <!-- @if (name == false) {
