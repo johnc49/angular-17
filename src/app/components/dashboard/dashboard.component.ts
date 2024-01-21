@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
     { id: 3, name: 'jack', country: 'DRC' },
     { id: 4, name: 'jones', country: 'USA' },
   ]);
-  supplierList = signal([]);
+  supplierList = signal(['']);
 
   constructor(private productService: ProductService) {}
 
